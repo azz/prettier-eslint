@@ -17,7 +17,8 @@ module.exports = {
       },
     },
     commit: {
-      description: 'This uses commitizen to help us generate well formatted commit messages',
+      description:
+        'This uses commitizen to help us generate well formatted commit messages',
       script: 'git-cz',
     },
     test: {
@@ -36,11 +37,13 @@ module.exports = {
       script: 'eslint .',
     },
     reportCoverage: {
-      description: 'Report coverage stats to codecov. This should be run after the `test` script',
+      description:
+        'Report coverage stats to codecov. This should be run after the `test` script',
       script: 'codecov',
     },
     release: {
-      description: 'We automate releases with semantic-release. This should only be run on travis',
+      description:
+        'We automate releases with semantic-release. This should only be run on travis',
       script: series(
         'semantic-release pre',
         'npm publish',
@@ -48,7 +51,8 @@ module.exports = {
       ),
     },
     validate: {
-      description: 'This runs several scripts to make sure things look good before committing or on clean install',
+      description:
+        'This runs several scripts to make sure things look good before committing or on clean install',
       script: concurrent.nps('lint', 'build', 'test'),
     },
     format: {
