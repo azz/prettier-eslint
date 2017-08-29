@@ -27,7 +27,7 @@ function MockCLIEngine(...args) {
   this.getConfigForFile = mockGetConfigForFileSpy
   this._originalExecuteOnText = fakeCLIEngine.executeOnText
   this.executeOnText = mockExecuteOnTextSpy
-  return this
+  return fakeCLIEngine
 }
 
 MockCLIEngine.prototype = Object.create(CLIEngine.prototype)
