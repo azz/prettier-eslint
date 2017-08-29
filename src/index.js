@@ -245,7 +245,6 @@ function getESLintCLIEngine(eslintPath, eslintOptions) {
   try {
     logger.trace(`requiring eslint module at "${eslintPath}"`)
     const {CLIEngine} = require(eslintPath)
-    console.log(CLIEngine)
     return new CLIEngine(eslintOptions)
   } catch (error) {
     logger.error(
